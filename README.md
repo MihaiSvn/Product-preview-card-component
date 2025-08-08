@@ -19,7 +19,7 @@ This is a solution to the [Product preview card component](https://www.frontendm
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://mihaisvn.github.io/Omelette-Recipe/)
+- Live Site URL: [GitHub Pages](https://mihaisvn.github.io/Product-preview-card-component/)
 
 
 ### Built with
