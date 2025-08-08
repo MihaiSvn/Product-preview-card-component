@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+img{
+    display:block;
+    width:100%;
+    height: auto;
+}
+
+:root{
+    --MONTSERRAT-FONT:Montserrat,sans-serif;
+    --FRAUNCES-FONT:Fraunces,sans-serif;  /* PRICE FONT */
+
+    --TEXT-FONT-SIZE:0.9rem;
+
+    --BG-COLOR:hsl(30, 38%, 92%);
+    --CARD-COLOR:hsl(0, 0%, 100%);
+    --PERFUME-COLOR:hsl(228, 12%, 48%);
+    --TEXT-COLOR:hsl(228, 12%, 48%);
+    --GREEN-COLOR:hsl(158, 36%, 37%);
+    --BUTTON-ACTIVE-COLOR:hsl(158, 42%, 18%);
+}
+
+.offscreen{
+    position: absolute;
+    left:-10000px;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    font-family: var(--MONTSERRAT-FONT);
+    font-size:var(--FONT-SIZE);
+    background-color: var(--BG-COLOR);
+    margin:1rem;
+}
+
+.card{
+    background-color: var(--CARD-COLOR);
+    display:grid;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+ .hero{
+  width:100%;
+}
+
+.hero img{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+ 
+}
+
+
+.content{
+    display:grid;
+    padding:2rem;
+    row-gap: 1rem;
+    font-size:var(--TEXT-FONT-SIZE);
+
+}
+
+.header2{
+    color:var(--PERFUME-COLOR);
+    margin-bottom: 5px;
+    font-size:0.9em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.header{
+    font-size:2em;
+    margin-bottom:5px;
+    font-family: var(--FRAUNCES-FONT);
+}
+
+.text{
+    color:var(--TEXT-COLOR);
+    text-align: start;
+    font-size: 1.1em;
+}
+
+.prices{
+    display:flex;
+    font-family: var(--FRAUNCES-FONT);
+    justify-content: flex-start;
+    align-items: center;
+    gap:1em;
+}
+
+.new-price{
+    font-size:2em;
+    color:var(--GREEN-COLOR);
+    font-weight: 900;
+}
+
+.old-price{
+    font-size:1.1em;
+    text-decoration:line-through;
+    color:var(--TEXT-COLOR);
+}
+
+
+.buy-button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap:0.75rem;
+   background-color: var(--GREEN-COLOR);
+   border: none;
+   border-radius: 10px;
+   color:var(--CARD-COLOR);
+   font-size: 1em;
+   padding:1em;
+}
+
+.buy-button img{
+    width: 1em;
+    display: inline-block;
+}
+
+.buy-button:hover{
+    cursor: pointer;
+}
+
+.buy-button:active{
+    background-color:var(--BUTTON-ACTIVE-COLOR);
+}
+
+@media screen and (min-width:713px){
+    :root{
+        --TEXT-FONT-SIZE:1rem;
+    }
+    .card{
+        max-width: 800px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero img{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 5px;
+    }
+    .content{
+        row-gap:0;
+    }
+    .buy-button{
+        padding:0;
+    }
+    .prices{
+        font-size:1.3rem;
+    }
+}
